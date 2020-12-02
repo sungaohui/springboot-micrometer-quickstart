@@ -1,0 +1,9 @@
+# \u66B4\u9732actuator\u7684prometheus endpoint \uFF08http://domain:port/metrics\uFF09
+management:
+  endpoints:
+    web:
+      base-path: /
+      path-mapping:
+        prometheus: metrics
+      exposure:
+        include: ["prometheus", "health"]
